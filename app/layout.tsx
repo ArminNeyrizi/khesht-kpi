@@ -1,23 +1,48 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
-import { ThemeProvider } from "next-themes";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const defaultUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "http://localhost:3000";
+const kook = localFont({
+  src: [
+    {
+      path: "../public/Font/Kook-ExtraLight.ttf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../public/Font/Kook-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/Font/Kook-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/Font/Kook-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/Font/Kook-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/Font/Kook-ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-kook",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  metadataBase: new URL(defaultUrl),
-  title: "Next.js and Supabase Starter Kit",
-  description: "The fastest way to build apps with Next.js and Supabase",
+  title: "Khesht KPI",
+  description: "Khesht KPI",
 };
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  display: "swap",
-  subsets: ["latin"],
-});
 
 export default function RootLayout({
   children,
@@ -25,16 +50,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+    <html lang="fa" dir="rtl" suppressHydrationWarning>
+      <body className={`${kook.variable} font-sans antialiased`}>
+        {children}
       </body>
     </html>
   );
