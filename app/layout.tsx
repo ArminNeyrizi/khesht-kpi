@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+import type { Metadata } from "next"
+import localFont from "next/font/local"
+
+import "./globals.css"
 
 const kook = localFont({
   src: [
@@ -37,23 +38,25 @@ const kook = localFont({
   ],
   variable: "--font-kook",
   display: "swap",
-});
+})
 
 export const metadata: Metadata = {
-  title: "Khesht KPI",
-  description: "Khesht KPI",
-};
+  title: "Khesht ERP",
+  description: "Enterprise Resource Planning System",
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning>
-      <body className={`${kook.variable} font-sans antialiased`}>
+      <body
+        className={`${kook.variable} min-h-screen bg-background font-sans antialiased`}
+      >
         {children}
       </body>
     </html>
-  );
+  )
 }

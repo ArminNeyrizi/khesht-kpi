@@ -1,13 +1,13 @@
 # 📁 khesht-kpi - Project Structure
 
-*Generated on: 9/24/2026, 11:51:28 AM*
+*Generated on: 9/24/2026, 1:26:35 PM*
 
 ## 📋 Quick Overview
 
 | Metric | Value |
 |--------|-------|
-| 📄 Total Files | 97 |
-| 📁 Total Folders | 21 |
+| 📄 Total Files | 89 |
+| 📁 Total Folders | 26 |
 | 🌳 Max Depth | 3 levels |
 | 🛠️ Tech Stack | React, Next.js, TypeScript, CSS, Node.js |
 
@@ -25,38 +25,38 @@
 
 ### By File Type
 
-- ⚛️ **.tsx** (React TypeScript files): 43 files (44.3%)
-- 🖼️ **.webp** (WebP images): 19 files (19.6%)
-- 🔷 **.ts** (TypeScript files): 9 files (9.3%)
-- 🔤 **.ttf** (TrueType fonts): 6 files (6.2%)
-- 📄 **.avif** (Other files): 6 files (6.2%)
-- ⚙️ **.json** (JSON files): 4 files (4.1%)
-- 📖 **.md** (Markdown files): 2 files (2.1%)
-- 🖼️ **.png** (PNG images): 2 files (2.1%)
-- 📄 **.mjs** (Other files): 2 files (2.1%)
-- 📄 **.** (Other files): 1 files (1.0%)
-- 🚫 **.gitignore** (Git ignore): 1 files (1.0%)
-- 🖼️ **.ico** (Icon files): 1 files (1.0%)
-- 🎨 **.css** (Stylesheets): 1 files (1.0%)
+- ⚛️ **.tsx** (React TypeScript files): 35 files (39.3%)
+- 🖼️ **.webp** (WebP images): 19 files (21.3%)
+- 🔷 **.ts** (TypeScript files): 9 files (10.1%)
+- 🔤 **.ttf** (TrueType fonts): 6 files (6.7%)
+- 📄 **.avif** (Other files): 6 files (6.7%)
+- ⚙️ **.json** (JSON files): 4 files (4.5%)
+- 📖 **.md** (Markdown files): 2 files (2.2%)
+- 🖼️ **.png** (PNG images): 2 files (2.2%)
+- 📄 **.mjs** (Other files): 2 files (2.2%)
+- 📄 **.** (Other files): 1 files (1.1%)
+- 🚫 **.gitignore** (Git ignore): 1 files (1.1%)
+- 🖼️ **.ico** (Icon files): 1 files (1.1%)
+- 🎨 **.css** (Stylesheets): 1 files (1.1%)
 
 ### By Category
 
-- **React**: 43 files (44.3%)
-- **Assets**: 28 files (28.9%)
-- **Other**: 9 files (9.3%)
-- **TypeScript**: 9 files (9.3%)
-- **Config**: 4 files (4.1%)
-- **Docs**: 2 files (2.1%)
-- **DevOps**: 1 files (1.0%)
-- **Styles**: 1 files (1.0%)
+- **React**: 35 files (39.3%)
+- **Assets**: 28 files (31.5%)
+- **Other**: 9 files (10.1%)
+- **TypeScript**: 9 files (10.1%)
+- **Config**: 4 files (4.5%)
+- **Docs**: 2 files (2.2%)
+- **DevOps**: 1 files (1.1%)
+- **Styles**: 1 files (1.1%)
 
 ### 📁 Largest Directories
 
-- **root**: 97 files
-- **components**: 31 files
+- **root**: 89 files
 - **public**: 31 files
 - **public/images**: 25 files
-- **app**: 17 files
+- **components**: 22 files
+- **app**: 18 files
 
 ## 🌳 Directory Structure
 
@@ -66,8 +66,9 @@ khesht-kpi/
 ├── 🟡 🚫 **.gitignore**
 ├── 🚀 app/
 │   ├── 📂 admin/
-│   │   └── 📂 employees/
+│   │   ├── 📂 employees/
 │   │   │   └── ⚛️ page.tsx
+│   │   └── ⚛️ page.tsx
 │   ├── 📂 auth/
 │   │   ├── 📂 confirm/
 │   │   │   └── 🔷 route.ts
@@ -87,31 +88,27 @@ khesht-kpi/
 │   ├── 🎨 globals.css
 │   ├── ⚛️ layout.tsx
 │   ├── 🖼️ opengraph-image.png
-│   ├── 📂 org-chart/
-│   │   └── ⚛️ page.tsx
+│   ├── 📂 organization/
+│   │   ├── 📂 companies/
+│   │   ├── 📂 departments/
+│   │   ├── 📂 employees/
+│   │   ├── 📂 org-chart/
+│   │   ├── ⚛️ page.tsx
+│   │   └── 📂 positions/
 │   ├── ⚛️ page.tsx
 │   ├── 📂 protected/
 │   │   ├── ⚛️ layout.tsx
 │   │   └── ⚛️ page.tsx
 │   └── 🖼️ twitter-image.png
 ├── 🧩 components/
+│   ├── 📂 admin/
+│   │   └── ⚛️ sidebar.tsx
 │   ├── ⚛️ auth-button.tsx
-│   ├── ⚛️ deploy-button.tsx
-│   ├── ⚛️ env-var-warning.tsx
 │   ├── ⚛️ forgot-password-form.tsx
-│   ├── ⚛️ hero.tsx
 │   ├── ⚛️ login-form.tsx
 │   ├── ⚛️ logout-button.tsx
-│   ├── ⚛️ next-logo.tsx
 │   ├── ⚛️ sign-up-form.tsx
-│   ├── ⚛️ supabase-logo.tsx
 │   ├── ⚛️ theme-switcher.tsx
-│   ├── 📂 tutorial/
-│   │   ├── ⚛️ code-block.tsx
-│   │   ├── ⚛️ connect-supabase-steps.tsx
-│   │   ├── ⚛️ fetch-data-steps.tsx
-│   │   ├── ⚛️ sign-up-user-steps.tsx
-│   │   └── ⚛️ tutorial-step.tsx
 │   ├── 🎨 ui/
 │   │   ├── ⚛️ avatar.tsx
 │   │   ├── ⚛️ badge.tsx
