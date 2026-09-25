@@ -1,109 +1,563 @@
-<a href="https://demo-nextjs-with-supabase.vercel.app/">
-  <img alt="Next.js and Supabase Starter Kit - the fastest way to build apps with Next.js and Supabase" src="https://demo-nextjs-with-supabase.vercel.app/opengraph-image.png">
-  <h1 align="center">Next.js and Supabase Starter Kit</h1>
-</a>
+Khesht ERP
 
-<p align="center">
- The fastest way to build apps with Next.js and Supabase
-</p>
+Enterprise Resource Planning System for Khesht Construction Holding
 
-<p align="center">
-  <a href="#features"><strong>Features</strong></a> ·
-  <a href="#demo"><strong>Demo</strong></a> ·
-  <a href="#deploy-to-vercel"><strong>Deploy to Vercel</strong></a> ·
-  <a href="#clone-and-run-locally"><strong>Clone and run locally</strong></a> ·
-  <a href="#feedback-and-issues"><strong>Feedback and issues</strong></a>
-  <a href="#more-supabase-examples"><strong>More Examples</strong></a>
-</p>
-<br/>
+Khesht ERP یک پلتفرم سازمانی یکپارچه برای مدیریت داده‌ها، فرآیندها، منابع و عملیات هلدینگ ساختمانی خشت است.
 
-## Features
+این سیستم با هدف ایجاد یک Single Source of Truth برای اطلاعات سازمان طراحی می‌شود؛ به‌طوری که شرکت‌ها، واحدها، کارکنان، پروژه‌ها، خدمات، مشتریان، مالی، فروش، منابع انسانی و سایر فرآیندهای سازمانی در یک ساختار یکپارچه مدیریت شوند.
 
-- Works across the entire [Next.js](https://nextjs.org) stack
-  - App Router
-  - Pages Router
-  - Proxy
-  - Client
-  - Server
-  - It just works!
-- supabase-ssr. A package to configure Supabase Auth to use cookies
-- Password-based authentication block installed via the [Supabase UI Library](https://supabase.com/ui/docs/nextjs/password-based-auth)
-- Styling with [Tailwind CSS](https://tailwindcss.com)
-- Components with [shadcn/ui](https://ui.shadcn.com/)
-- Optional deployment with [Supabase Vercel Integration and Vercel deploy](#deploy-your-own)
-  - Environment variables automatically assigned to Vercel project
+⸻
 
-## Demo
+هدف پروژه
 
-You can view a fully working demo at [demo-nextjs-with-supabase.vercel.app](https://demo-nextjs-with-supabase.vercel.app/).
+هدف Khesht ERP جایگزین کردن فایل‌های پراکنده، Excel، فرآیندهای دستی و ابزارهای جدا از هم با یک سیستم سازمانی یکپارچه است.
 
-## Deploy to Vercel
+اصول اصلی سیستم:
 
-Vercel deployment will guide you through creating a Supabase account and project.
+* یک منبع مرکزی برای داده‌های سازمان
+* حذف ورود چندباره اطلاعات
+* استانداردسازی فرآیندها
+* دسترسی کنترل‌شده به اطلاعات
+* ثبت تاریخچه تغییرات
+* اتوماسیون فرآیندهای تکراری
+* گزارش‌گیری لحظه‌ای
+* قابلیت توسعه برای شرکت‌ها و واحدهای مختلف هلدینگ
 
-After installation of the Supabase integration, all relevant environment variables will be assigned to the project so the deployment is fully functioning.
+⸻
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fwith-supabase&project-name=nextjs-with-supabase&repository-name=nextjs-with-supabase&demo-title=nextjs-with-supabase&demo-description=This+starter+configures+Supabase+Auth+to+use+cookies%2C+making+the+user%27s+session+available+throughout+the+entire+Next.js+app+-+Client+Components%2C+Server+Components%2C+Route+Handlers%2C+Server+Actions+and+Middleware.&demo-url=https%3A%2F%2Fdemo-nextjs-with-supabase.vercel.app%2F&external-id=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fwith-supabase&demo-image=https%3A%2F%2Fdemo-nextjs-with-supabase.vercel.app%2Fopengraph-image.png)
+Scope
 
-The above will also clone the Starter kit to your GitHub, you can clone that locally and develop locally.
+Khesht ERP در چند لایه توسعه پیدا می‌کند:
 
-If you wish to just develop locally and not deploy to Vercel, [follow the steps below](#clone-and-run-locally).
+1. Organization
 
-## Clone and run locally
+مدیریت ساختار سازمانی:
 
-1. You'll first need a Supabase project which can be made [via the Supabase dashboard](https://database.new)
+* Holding
+* Companies
+* Departments
+* Units
+* Positions
+* Employees
+* Employee Positions
+* Organizational Chart
 
-2. Create a Next.js app using the Supabase Starter template npx command
+⸻
 
-   ```bash
-   npx create-next-app --example with-supabase with-supabase-app
-   ```
+2. CRM
 
-   ```bash
-   yarn create next-app --example with-supabase with-supabase-app
-   ```
+مدیریت ارتباط با مشتری:
 
-   ```bash
-   pnpm create next-app --example with-supabase with-supabase-app
-   ```
+* Contacts
+* Leads
+* Customers
+* Companies
+* Opportunities
+* Activities
+* Follow-ups
+* Sales Pipeline
+* Communication History
 
-3. Use `cd` to change into the app's directory
+⸻
 
-   ```bash
-   cd with-supabase-app
-   ```
+3. Sales
 
-4. Rename `.env.example` to `.env.local` and update the following:
+مدیریت فرآیند فروش:
 
-  ```env
-  NEXT_PUBLIC_SUPABASE_URL=[INSERT SUPABASE PROJECT URL]
-  NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=[INSERT SUPABASE PROJECT API PUBLISHABLE OR ANON KEY]
-  ```
-  > [!NOTE]
-  > This example uses `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, which refers to Supabase's new **publishable** key format.
-  > Both legacy **anon** keys and new **publishable** keys can be used with this variable name during the transition period. Supabase's dashboard may show `NEXT_PUBLIC_SUPABASE_ANON_KEY`; its value can be used in this example.
-  > See the [full announcement](https://github.com/orgs/supabase/discussions/29260) for more information.
+Lead
+  ↓
+Contact
+  ↓
+Qualification
+  ↓
+Opportunity
+  ↓
+Proposal
+  ↓
+Negotiation
+  ↓
+Contract
+  ↓
+Won / Lost
 
-  Both `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` can be found in [your Supabase project's API settings](https://supabase.com/dashboard/project/_?showConnect=true)
+⸻
 
-5. You can now run the Next.js local development server:
+4. Services
 
-   ```bash
-   npm run dev
-   ```
+مدیریت کاتالوگ خدمات:
 
-   The starter kit should now be running on [localhost:3000](http://localhost:3000/).
+هر Service شامل اطلاعاتی مانند:
 
-6. This template comes with the default shadcn/ui style initialized. If you instead want other ui.shadcn styles, delete `components.json` and [re-install shadcn/ui](https://ui.shadcn.com/docs/installation/next)
+* Service Name
+* Category
+* Description
+* Customer Type
+* Customer Problem
+* Service Scope
+* Requirements
+* Required Documents
+* Pricing
+* Delivery Process
+* Responsible Unit
+* SLA
+* Status
 
-> Check out [the docs for Local Development](https://supabase.com/docs/guides/getting-started/local-development) to also run Supabase locally.
+⸻
 
-## Feedback and issues
+5. Projects
 
-Please file feedback and issues over on the [Supabase GitHub org](https://github.com/supabase/supabase/issues/new/choose).
+مدیریت پروژه‌ها:
 
-## More Supabase examples
+* Projects
+* Project Members
+* Tasks
+* Milestones
+* Documents
+* Project Status
+* Project Costs
+* Project Revenue
+* Project Activities
 
-- [Next.js Subscription Payments Starter](https://github.com/vercel/nextjs-subscription-payments)
-- [Cookie-based Auth and the Next.js 13 App Router (free course)](https://youtube.com/playlist?list=PL5S4mPUpp4OtMhpnp93EFSo42iQ40XjbF)
-- [Supabase Auth and the Next.js App Router](https://github.com/supabase/supabase/tree/master/examples/auth/nextjs)
+⸻
+
+6. Finance
+
+مدیریت اطلاعات مالی و عملیاتی:
+
+* Accounts
+* Transactions
+* Cash
+* Petty Cash
+* Expenses
+* Income
+* Receivables
+* Payables
+* Budgets
+* Financial Reports
+
+Khesht ERP می‌تواند با سیستم حسابداری موجود یکپارچه شود و لزوماً جایگزین نرم‌افزار حسابداری تخصصی نیست.
+
+⸻
+
+7. Human Resources
+
+مدیریت منابع انسانی:
+
+* Employees
+* Contracts
+* Positions
+* Departments
+* Attendance
+* Leave
+* Performance
+* Skills
+* Training
+* Employee Documents
+
+⸻
+
+8. Documents
+
+مدیریت اسناد سازمان:
+
+* Company Documents
+* Employee Documents
+* Contracts
+* Project Documents
+* Financial Documents
+* Service Documents
+
+هر سند باید دارای:
+
+* Owner
+* Related Entity
+* Version
+* Created At
+* Updated At
+* Access Level
+
+باشد.
+
+⸻
+
+9. Workflow & Automation
+
+اتوماسیون فرآیندهای سازمانی:
+
+Event
+  ↓
+Condition
+  ↓
+Action
+  ↓
+Notification / Task / Update
+
+نمونه:
+
+New Lead
+    ↓
+Create CRM Record
+    ↓
+Assign Sales Expert
+    ↓
+Create Follow-up
+    ↓
+Notify Responsible Person
+
+⸻
+
+10. Dashboard & Reporting
+
+داشبوردهای مدیریتی برای مشاهده:
+
+* Sales
+* Revenue
+* Costs
+* Projects
+* Employees
+* Leads
+* Customers
+* Tasks
+* KPIs
+* Company Performance
+
+⸻
+
+Architecture
+
+معماری سیستم به‌صورت ماژولار طراحی می‌شود.
+
+                    Khesht ERP
+                         │
+        ┌────────────────┼────────────────┐
+        │                │                │
+      Frontend          API            Database
+        │                │                │
+     Next.js          Backend          PostgreSQL
+        │                │                │
+        └────────────────┼────────────────┘
+                         │
+                    Automation
+                         │
+                       n8n
+                         │
+              ┌──────────┼──────────┐
+              │          │          │
+            Email      CRM       Reports
+
+⸻
+
+Technology Stack
+
+Frontend
+
+* Next.js
+* TypeScript
+* Tailwind CSS
+* shadcn/ui
+
+Backend / Database
+
+* Supabase
+* PostgreSQL
+* Row Level Security (RLS)
+
+Automation
+
+* n8n
+
+Authentication
+
+* Supabase Auth
+
+Deployment
+
+* Vercel / Cloud infrastructure
+
+⸻
+
+Database
+
+Database اصلی سیستم PostgreSQL است.
+
+ساختار دیتابیس به‌صورت relational طراحی می‌شود و ارتباط بین موجودیت‌های سازمانی باید از طریق Foreign Keyها کنترل شود.
+
+نمونه ساختار:
+
+companies
+departments
+positions
+employees
+employee_positions
+customers
+contacts
+leads
+opportunities
+activities
+services
+service_categories
+projects
+project_members
+tasks
+accounts
+transactions
+expenses
+income
+documents
+document_versions
+users
+roles
+permissions
+
+⸻
+
+Core Principle
+
+داده باید فقط یک‌بار ایجاد شود و در تمام سیستم قابل استفاده باشد.
+
+مثلاً اطلاعات یک شرکت نباید جداگانه در CRM، پروژه، مالی و فروش ذخیره شود.
+
+Company
+   │
+   ├── CRM
+   ├── Sales
+   ├── Projects
+   ├── Finance
+   ├── Documents
+   └── Reports
+
+⸻
+
+Security
+
+دسترسی کاربران بر اساس Role و Permission کنترل می‌شود.
+
+نمونه:
+
+User
+  ↓
+Role
+  ↓
+Permissions
+  ↓
+Resources
+
+دسترسی می‌تواند در سطح:
+
+* Module
+* Table
+* Record
+* Field
+* Action
+
+کنترل شود.
+
+مثلاً یک کاربر ممکن است بتواند Customer را مشاهده کند ولی اجازه حذف آن را نداشته باشد.
+
+⸻
+
+Audit Log
+
+تمام تغییرات حساس سیستم باید قابل ردیابی باشند.
+
+نمونه:
+
+User: 123
+Action: UPDATE
+Table: customers
+Record: 982
+Old Value: ...
+New Value: ...
+Timestamp: ...
+
+⸻
+
+Development Principles
+
+1. Keep It Simple
+
+هر قابلیت جدید باید تا حد ممکن ساده‌ترین implementation ممکن را داشته باشد.
+
+2. Database First
+
+ساختار داده قبل از ساخت UI مشخص می‌شود.
+
+3. Single Source of Truth
+
+یک داده نباید در چند جای مستقل نگهداری شود.
+
+4. Automation Before Manual Work
+
+هر فرآیند تکراری که قابل اتوماسیون است، نباید به‌صورت دستی انجام شود.
+
+5. Modular Architecture
+
+هر ماژول باید تا حد امکان مستقل و قابل توسعه باشد.
+
+6. No Unnecessary Features
+
+قابلیت جدید فقط زمانی اضافه می‌شود که یک نیاز واقعی سازمانی را حل کند.
+
+⸻
+
+Project Structure
+
+khesht-erp/
+│
+├── app/
+│   ├── dashboard/
+│   ├── crm/
+│   ├── sales/
+│   ├── services/
+│   ├── projects/
+│   ├── finance/
+│   ├── hr/
+│   ├── documents/
+│   └── settings/
+│
+├── components/
+│   ├── ui/
+│   ├── tables/
+│   ├── forms/
+│   ├── charts/
+│   └── layout/
+│
+├── lib/
+│   ├── supabase/
+│   ├── auth/
+│   ├── permissions/
+│   └── utils/
+│
+├── types/
+│
+├── hooks/
+│
+├── services/
+│
+├── public/
+│
+└── README.md
+
+⸻
+
+Development Workflow
+
+Requirement
+    ↓
+Data Model
+    ↓
+Database
+    ↓
+API / Server Logic
+    ↓
+UI
+    ↓
+Permissions
+    ↓
+Automation
+    ↓
+Testing
+    ↓
+Deployment
+
+⸻
+
+Environment Variables
+
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+
+Secrets نباید داخل repository قرار بگیرند.
+
+⸻
+
+Local Development
+
+Install dependencies:
+
+npm install
+
+Run development server:
+
+npm run dev
+
+Application:
+
+http://localhost:3000
+
+⸻
+
+Database Development
+
+قبل از تغییر Schema:
+
+1. تغییر موردنظر مشخص شود.
+2. Migration ایجاد شود.
+3. Migration روی Development اجرا شود.
+4. داده‌های موجود بررسی شود.
+5. سپس تغییر به Production منتقل شود.
+
+هیچ تغییر مستقیم و بدون کنترل روی Production انجام نشود.
+
+⸻
+
+Current Modules
+
+Module	Status
+Organization	In Development
+CRM	Planned
+Sales	Planned
+Services	In Development
+Projects	Planned
+Finance	Planned
+HR	Planned
+Documents	Planned
+Workflow	Planned
+Dashboard	In Development
+Reporting	Planned
+
+⸻
+
+Long-Term Direction
+
+Khesht ERP به‌عنوان لایه عملیاتی هلدینگ طراحی می‌شود.
+
+ساختار کلی:
+
+Khesht Holding
+       │
+       ├── Companies
+       │
+       ├── People
+       │
+       ├── Customers
+       │
+       ├── Services
+       │
+       ├── Projects
+       │
+       ├── Finance
+       │
+       ├── Documents
+       │
+       └── Operations
+              │
+              ├── ERP
+              ├── CRM
+              ├── Automation
+              └── Reporting
+
+هدف نهایی این است که اطلاعات عملیاتی هلدینگ از یک سیستم مرکزی مدیریت شود و هر شرکت، واحد و مدیر فقط به داده‌هایی دسترسی داشته باشد که برای نقش او لازم است.
+
+⸻
+
+Status
+
+Project: Khesht ERP
+Organization: Khesht Construction Holding
+Type: Enterprise Management System
+Database: PostgreSQL / Supabase
+Frontend: Next.js
+Automation: n8n
+Status: Active Development
